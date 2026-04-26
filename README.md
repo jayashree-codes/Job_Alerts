@@ -1,5 +1,5 @@
 # Edinburgh Job Alert - Sainsbury's & Tesco 
-=======================================================================
+
 Polls both career sites and opens a sticky-note HTML page in your browser
 whenever new jobs appear, with clickable apply links.
 
