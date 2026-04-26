@@ -25,3 +25,5 @@ whenever new jobs appear, with clickable apply links.
 Jobs are deduplicated by BOTH their URL and their normalised title+location,
 so the same posting won't appear twice even if the URL changes slightly.
 Seen jobs are stored in 'seen_jobs.json' next to this script.
+
+### NOTE: Update the job page URLS for Sainsbury's and Tesco in the python file
