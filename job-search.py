@@ -42,12 +42,12 @@ from bs4 import BeautifulSoup
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIG  ← edit these
 # ─────────────────────────────────────────────────────────────────────────────
-EMAIL_FROM   = "jayworks2043@gmail.com"
-EMAIL_TO     = "jayworks2043@gmail.com"
+EMAIL_FROM   = "your-mail@gmail.com" #replace with your email id
+EMAIL_TO     = "your-mail@gmail.com" #replace with your email id
 SMTP_HOST    = "smtp.gmail.com"
 SMTP_PORT    = 587
-SMTP_USER    = "jayworks2043@gmail.com"
-SMTP_PASS    = "eablnvnlnoizvmlz"
+SMTP_USER    = "your-mail@gmail.com" #replace with your email id
+SMTP_PASS    = "app-password" #enter the app password created
 
 SEEN_FILE      = Path(__file__).parent / "seen_jobs.json"
 USE_BROWSER    = True    # True = Playwright (handles JS); False = plain requests
