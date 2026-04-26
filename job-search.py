@@ -1,32 +1,3 @@
-"""
-Edinburgh Job Alert - Sainsbury's & Tesco (within 5 miles of EH11 2EE)
-=======================================================================
-Polls both career sites and opens a sticky-note HTML page in your browser
-whenever new jobs appear, with clickable apply links.
-
-SETUP
------
-1. Install dependencies:
-       pip install requests beautifulsoup4 playwright
-       playwright install chromium
-
-2. (Optional) Set your email credentials for email alerts too:
-   - Create a Gmail App Password: https://myaccount.google.com/apppasswords
-   - Fill in the CONFIG section below, and set NOTIFY_EMAIL = True
-
-3. Run once manually to seed the known-jobs cache:
-       python job_alert.py
-
-4. Schedule it (runs every 30 min):
-   - Mac:     crontab -e  →  */30 * * * * /usr/bin/python3 /Users/jayashreehariharan/Desktop/Part-Time/job-search.py
-   - Windows: Task Scheduler → repeat every 30 minutes
-
-Duplicate prevention
---------------------
-Jobs are deduplicated by BOTH their URL and their normalised title+location,
-so the same posting won't appear twice even if the URL changes slightly.
-Seen jobs are stored in 'seen_jobs.json' next to this script.
-"""
 
 import json
 import smtplib
@@ -64,18 +35,9 @@ HEADERS = {
     "Accept-Language": "en-GB,en;q=0.9",
 }
 
-SAINSBURYS_URL = (
-    "https://www.sainsburys.jobs/jobs"
-    "?full_time=&part_time=&fixed_term=&filter_by=&location=edinburgh&keywords="
-)
+SAINSBURYS_URL = ("enter-your-specific-url-here") #use the url available after applying all your needed filters
 
-TESCO_URL = (
-    "https://careers.tesco.com/en_GB/careers/SearchJobs/"
-    "?748_location_place=EH11%202EE,%20Gorgie,%20Edinburgh,%20Scotland,%20United%20Kingdom"
-    "&748_location_radius=5"
-    "&748_location_coordinates=[55.94,-3.22]"
-    "&listFilterMode=1&jobRecordsPerPage=10&"
-)
+TESCO_URL = ("enter-your-specific-url-here") #use the url available after applying all your needed filters
 
 RETAILER_COLORS = {
     "sainsburys": {"bg": "#f5f0e8", "accent": "#e8520a", "label": "Sainsbury's"},
